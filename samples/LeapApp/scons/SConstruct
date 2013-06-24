@@ -1,0 +1,11 @@
+env = Environment()
+
+env['APP_TARGET'] = 'LeapApp'
+env['APP_SOURCES'] = ['LeapApp.cpp', 'LeapListener.cpp']
+env['DEBUG'] = 1
+
+# Cinder-Leap
+env = SConscript('../../../scons/SConscript', exports = 'env')
+
+SConscript('../../../../../scons/SConscript', exports = 'env')
+
