@@ -75,7 +75,7 @@ void LeapApp::draw()
 
 	const Leap::HandList hands = mLeapListener.getHands();
 
-	if ( !hands.empty() )
+	if ( !hands.isEmpty() )
 	{
 		// Get the first hand
 		const Leap::Hand hand = hands[ 0 ];
